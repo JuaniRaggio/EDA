@@ -34,9 +34,9 @@ La idea es guardarse los valores ya calculados en vez de volver a computar funci
 #include <stdio.h>
 
 #define MAX 100
-#define UNDEFINED -1
+#define UNDEFINED 0
 
-long long memo[MAX];
+static long long memo[MAX];
 
 long long fibonacci(int n) {
     if (n <= 1) return n;
