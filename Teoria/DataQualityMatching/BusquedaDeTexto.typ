@@ -51,7 +51,42 @@ long long fibonacci(int n) {
 
 ```
 
+== Levenshtein Distance
 
+#table(columns: 10)[][Distance][B][I][G][][D][A][T][A][Distancia][0][1][2][3][4][5][6][7][8][B][1][min{1 + 1, 0 + 0} = 0][min{1 + 2, 0 + 1} = 1][][][][][][][I][2][1][0][1][2][3][4][5][6][G][3][2][1][0][1][][][][][D][4][][][][][][][][][A][5][][][][][][][][][T][6][][][][][][][][][A][7][min{5 + 1, 7 + 1} = 6][5][4][4][4][3][min{1 + 1, 3 + 1} = 2][1]
 
+En este caso: _el minimo local me lleva al minimo global_, notemos que *abajo a la derecha tenemos el minimo global* y es la distancia
 
+#underline[Ejercicio en clase:]
+Cual es la distancia?
+
+```java
+Levenshtein("exkusa", "ex-amigo")
+```
+
+Operaciones: 
+
+$"exkusa" -> "ex-amigo"$
+
+1) $k -> -$
+
+2) $u -> a$
+
+3) $s -> m$
+
+4) $a -> i$
+
+5) $"add" -> g$
+
+6) $"add" -> o$
+
+#align(center)[== Task]
+
+1. Implementar la distancia de Levenshtein con programacion dinamica
+
+2. Calcular complejidad *temporal* y *espacial* del algoritmo propuesto
+
+3. Hacer la implementacion ocupando el menor espacio posible
+
+*Recordar*: _La idea es siempre calcular en base al caso anterior_
 
