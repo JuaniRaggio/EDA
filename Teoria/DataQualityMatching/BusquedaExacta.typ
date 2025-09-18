@@ -14,10 +14,21 @@ Dado dos arreglos de chars: *target* y *query*, queremos un codigo Java que perm
 
 - Tiene en cada posicion "i" la *longitud del borde propio*
 
+\
+
 == Ejercicio 1
 Calcular el next en cada caso
 
 #table(columns: 12)[Query][A][B][R][A][C][A][D][A][B][R][A][Next][0][0][0][1][0][1][0][1][2][3][4]
 
 #table(columns: 4)[Query][A][B][A][Next][0][0][1]
+
+\
+
+== Como usar la tabla Next?
+_Idea_:
+
+- Si pquery > 0 cambiaria solo pquery por next[pquery - 1]. Entonces, pquery apunta
+
+- Si coinciden avanzan ambos
 

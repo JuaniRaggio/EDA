@@ -48,5 +48,19 @@ $=>$ fuera del hashing se alamacenan los elementos que colisionaron
 - La zona de overflow se administra a demanda (no a priori)
 
 
+==== Factor de carga global => Threshold
+
+En caso de alcanzarlo, duplicamos la tabla y rehasheamos con la idea de acercarnos a O(1)
+
+===== Problema
+_Si hay una ranura muy llena_, no podemos darnos cuenta con el factor de carga global
+
+===> Algunos usan *factor de carga local* y si una lista particular supera cierta longitud se hace split. Otros *combinan las estrategias*
+
+===== Como lo soluciona Java?
+
+- Si hay pocos elementos, deja la lista desordenada
+
+- Si se alcanza el *factor de carga local*, transforma ese bucket en un RedBlackTree especial que usa tieBreakOrder
 
 
