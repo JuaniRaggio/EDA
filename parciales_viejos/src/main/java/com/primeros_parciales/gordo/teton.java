@@ -1,4 +1,4 @@
-package com.primeros_parciales.msn;
+package com.primeros_parciales.gordo;
 
 public class teton {
 
