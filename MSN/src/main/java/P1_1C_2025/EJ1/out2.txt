@@ -1,0 +1,118 @@
+**** TEST 1 ****
+Size: 10
+
+Dump
+ah
+ah
+ah
+ah
+bio
+hola
+tal
+tal
+veo
+veo
+
+DumpNodes
+ah
+bio
+hola
+tal
+veo
+
+**** TEST 2 ****
+After Removing
+Size: 6
+
+Dump
+ah
+ah
+ah
+bio
+tal
+veo
+
+DumpNodes
+ah
+bio
+tal
+veo
+
+**** TEST 3 ****
+Dump with Iterator
+ah
+ah
+ah
+ah
+bio
+hola
+tal
+tal
+veo
+veo
+**** TEST 4 ****
+Salteo: ah
+Borro: ah
+Salteo: ah
+Borro: ah
+Salteo: bio
+Borro: hola
+Salteo: tal
+Borro: tal
+Salteo: veo
+Borro: veo
+After Removing
+Size: 5
+
+Dump
+ah
+ah
+bio
+tal
+veo
+
+DumpNodes
+ah
+bio
+tal
+veo
+
+Dump with Iterator
+ah
+ah
+bio
+tal
+veo
+**** TEST 5 ****
+Borro: ah
+Salteo: ah
+Borro: ah
+Salteo: ah
+Borro: bio
+Salteo: hola
+Borro: tal
+Salteo: tal
+Borro: veo
+Salteo: veo
+After Removing
+Size: 5
+
+Dump
+ah
+ah
+hola
+tal
+veo
+
+DumpNodes
+ah
+hola
+tal
+veo
+
+Dump with Iterator
+ah
+ah
+hola
+tal
+veo
