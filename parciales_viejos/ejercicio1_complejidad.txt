@@ -1,0 +1,24 @@
+EJERCICIO 1.2 - ANÁLISIS DE COMPLEJIDAD DEL MÉTODO randomSplitListas
+
+COMPLEJIDAD TEMPORAL:
+- El método recorre la lista original una sola vez: O(N) donde N es el número de elementos
+- Para cada elemento, realiza operaciones constantes:
+  * getRandom(nLists): O(1)
+  * Desconectar nodo: O(1)
+  * Insertar en lista destino: O(1) (inserción al final)
+- La inicialización del arreglo de listas: O(nLists)
+
+Total: O(N + nLists) = O(N) (asumiendo que nLists es constante o menor que N)
+
+COMPLEJIDAD ESPACIAL:
+- Arreglo de nLists listas: O(nLists)
+- NO se crean nuevos nodos Item, solo se reusan los existentes
+- Variables auxiliares: O(1)
+
+Total: O(nLists)
+
+JUSTIFICACIÓN:
+- El algoritmo es eficiente porque reutiliza los nodos existentes sin crear copias
+- Cada nodo se procesa exactamente una vez
+- La inserción al final de cada lista se mantiene en O(1) gracias al puntero 'last'
+- El espacio adicional es mínimo, solo el arreglo de referencias a las nuevas listas

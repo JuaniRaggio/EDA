@@ -1,0 +1,63 @@
+EJERCICIO 3 - ANÁLISIS DE SCORING EN LUCENE
+===========================================
+
+DATOS DE LA COLECCIÓN:
+- a.txt (docid 0): "Fly Me to the Moon"
+- b.txt (docid 1): "Fly Fly Away"
+- c.txt (docid 2): "Bohemian Rhapsody"
+- d.txt (docid 3): "To the Moon and Back"
+- e.txt (docid 4): "Fly Like an Eagle"
+
+ANALYZER: SimpleAnalyzer (convierte a minúsculas, elimina puntuación)
+
+TÉRMINOS DESPUÉS DE ANÁLISIS:
+- a.txt: [fly, me, to, the, moon]
+- b.txt: [fly, fly, away]
+- c.txt: [bohemian, rhapsody]
+- d.txt: [to, the, moon, and, back]
+- e.txt: [fly, like, an, eagle]
+
+QUERY: content:Fly OR content:Moon
+Después del análisis: [fly] OR [moon]
+
+CÁLCULO DE TF-IDF PARA CADA TÉRMINO:
+
+1. TÉRMINO "fly":
+   - Documentos que contienen "fly": a.txt, b.txt, e.txt (3 documentos)
+   - df(fly) = 3
+   - idf(fly) = log(5/3) = log(1.667) ≈ 0.477
+
+   TF por documento:
+   - a.txt: tf = 1, score = 1 * 0.477 = 0.477
+   - b.txt: tf = 2, score = 2 * 0.477 = 0.954
+   - e.txt: tf = 1, score = 1 * 0.477 = 0.477
+
+2. TÉRMINO "moon":
+   - Documentos que contienen "moon": a.txt, d.txt (2 documentos)
+   - df(moon) = 2
+   - idf(moon) = log(5/2) = log(2.5) ≈ 0.916
+
+   TF por documento:
+   - a.txt: tf = 1, score = 1 * 0.916 = 0.916
+   - d.txt: tf = 1, score = 1 * 0.916 = 0.916
+
+SCORES FINALES (suma de scores de términos que matchean):
+
+1. a.txt (docid 0): 0.477 (fly) + 0.916 (moon) = 1.393
+2. b.txt (docid 1): 0.954 (fly) = 0.954
+3. d.txt (docid 3): 0.916 (moon) = 0.916
+4. e.txt (docid 4): 0.477 (fly) = 0.477
+
+RESULTADO ORDENADO POR SCORE (mayor a menor):
+
+Posición 1: Score 1.393 - Documento 0 (a.txt)
+Posición 2: Score 0.954 - Documento 1 (b.txt)
+Posición 3: Score 0.916 - Documento 3 (d.txt)
+Posición 4: Score 0.477 - Documento 4 (e.txt)
+
+JUSTIFICACIÓN:
+- a.txt tiene el mayor score porque contiene ambos términos de búsqueda
+- b.txt tiene "fly" con tf=2, lo que le da mayor peso que otros docs con tf=1
+- d.txt solo contiene "moon" pero con idf alto
+- e.txt solo contiene "fly" con tf=1
+- c.txt no aparece porque no contiene ninguno de los términos buscados
