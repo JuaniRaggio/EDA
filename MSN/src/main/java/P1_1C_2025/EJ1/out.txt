@@ -1,0 +1,107 @@
+**** TEST 1 ****
+Size: 10
+
+Dump
+ah
+ah
+ah
+ah
+bio
+hola
+tal
+tal
+veo
+veo
+
+DumpNodes
+ah
+ah
+ah
+ah
+bio
+hola
+tal
+tal
+veo
+veo
+
+**** TEST 2 ****
+After Removing
+Size: 6
+
+Dump
+ah
+ah
+ah
+bio
+tal
+veo
+
+DumpNodes
+ah
+ah
+ah
+bio
+tal
+veo
+
+**** TEST 3 ****
+Dump with Iterator
+**** TEST 4 ****
+After Removing
+Size: 10
+
+Dump
+ah
+ah
+ah
+ah
+bio
+hola
+tal
+tal
+veo
+veo
+
+DumpNodes
+ah
+ah
+ah
+ah
+bio
+hola
+tal
+tal
+veo
+veo
+
+Dump with Iterator
+**** TEST 5 ****
+After Removing
+Size: 10
+
+Dump
+ah
+ah
+ah
+ah
+bio
+hola
+tal
+tal
+veo
+veo
+
+DumpNodes
+ah
+ah
+ah
+ah
+bio
+hola
+tal
+tal
+veo
+veo
+
+Dump with Iterator
