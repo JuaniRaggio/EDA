@@ -119,9 +119,36 @@ _Siempre recursivamente de izquierda a derecha_
 
 \
 
-= Ejercicio
+= Recorridos posibles
 
+- Preorder
+- Inorder
+- Postorder
+- Por niveles:
 
+     \*
+
+++        -10
+
+  \/
+
+++ -10
+
+3.5
+
+_Nota:_ En vez de dejar en blanco las hojas vacias, se usan simbolos "dummies" para escribir un arbol en un txt
+
+=== Por niveles con placeholders:
+
+_primero el del nivel mas alto en la jerarquia pero se escriben todas las hojas dentro de un nivel_
+
+\*
+++ -10
+? \/ ? ?
+? ? ++ -10 ? ? ? ?
+? ? ? ? ? 3.5
+
+*El ultimo nivel pueden dejarse "vacios" los ultimos elementos*
 
 
 
