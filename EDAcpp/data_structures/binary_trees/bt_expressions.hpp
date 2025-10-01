@@ -97,10 +97,16 @@ public:
     buildTree(line);
   }
 
-  double eval();
-  void preorder();
-  void inorder();
-  void postorder();
+    double eval();
+
+    static std::string preorder(Node& sub_tree) {
+        if (sub_tree.right) {
+            return preorder(*sub_tree.right);
+        }
+    }
+
+    static std::string inorder(ExpTree root);
+    static std::string postorder(ExpTree root);
 
 private:
   void buildTree(const std::string &line) {

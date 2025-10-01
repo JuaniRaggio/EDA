@@ -1,13 +1,20 @@
 #include "bt_expressions.hpp"
+#include <atomic>
+#include <string>
 
 double ExpTree::eval() {
     return 0.0;
 }
-void ExpTree::preorder() {}
+std::string ExpTree::preorder(ExpTree root) {
+    std::string ordered_tree;
+    return ordered_tree;
+}
 
-void ExpTree::inorder() {}
+std::string ExpTree::inorder(ExpTree root) {
+    if () {}
+}
 
-void ExpTree::postorder() {}
+std::string ExpTree::postorder() {}
 
 // hasta que armen los testeos
 int main() {
