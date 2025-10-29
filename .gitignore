@@ -6,3 +6,5 @@ target
 *.pdf
 .DS_Store
 *.class
+build
+.cache

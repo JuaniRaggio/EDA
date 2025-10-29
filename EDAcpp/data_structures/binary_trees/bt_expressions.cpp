@@ -11,7 +11,7 @@ std::string ExpTree::preorder(ExpTree root) {
 }
 
 std::string ExpTree::inorder(ExpTree root) {
-    if () {}
+    if (root) {}
 }
 
 std::string ExpTree::postorder() {}
