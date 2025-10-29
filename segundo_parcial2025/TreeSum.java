@@ -40,8 +40,7 @@ public class TreeSum {
                 for (int i = 0; i < numNodes; i++) {
                     pendingOps.add( new NodeHelper(null, -1) );
                 }
-            }
-            else {
+            } else {
                 if (childIndex >= 0) {
                     currentNode = currentNode.setChild(childIndex, new Node(numNodes));
                 }
@@ -195,14 +194,35 @@ public class TreeSum {
     }
 
     public static void main(String[] args){
+        // Los 3 ejemplos del pdf ok
+        // 3, 1, 4, 1
+        // 3, 2
+        // 3, 3, 3
+        // 3, 3, 1
         System.out.println("Ejemplo 1");
         main1(args);
+
+        // 3, 3, 1, 0
         System.out.println("Ejemplo 2");
         main2(args);
+
+        // 2, 1, 4
+        // 2, 2, 3
+        // 2, 2, 1
+        // 2, 3,1
         System.out.println("Ejemplo 3");
         main3(args);
+
+        // ok
+        // 1
         System.out.println("Ejemplo 4");
         main4(args);
+
+        // ok
+        // 1, 2, 4
+        // 1, 3, 5, 7
+        // 1, 3, 5, 8
+        // 1, 3, 6
         System.out.println("Ejemplo 5");
         main5(args);
     }
